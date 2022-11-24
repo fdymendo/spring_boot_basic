@@ -11,6 +11,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
+/**
+ * @table Is an annotation that indicates the JPA in which table needs to map an entity.
+ * So JPA will know on which table of the date base will interact
+ */
+
 @Data
 @Entity
 @NoArgsConstructor
@@ -27,6 +32,11 @@ public class AnimalEntity {
   private Date creationDate;
   @Column(name = "last_update", updatable = true)
   private Date lastUpdate;
+
+
+  /**
+   * The method Date() returns  a String that represent the current date and time
+   */
 
   public void init() {
     this.creationDate = new Date();

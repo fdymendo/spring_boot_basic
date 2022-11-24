@@ -3,6 +3,11 @@ package com.fdymendo.learning.springbootbasic.service;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+/**
+ *  An interface that extends from JpaRepository and has save , deleteById, findAll and findById functions.
+ */
+
+
 public abstract class ACrudServiceTemplate<T extends JpaRepository<S, Integer>, S> {
 
   protected T repository;
