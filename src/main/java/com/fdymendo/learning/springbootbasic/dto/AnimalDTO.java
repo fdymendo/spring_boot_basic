@@ -8,8 +8,6 @@ import lombok.Data;
 /**
  * Sheet of the AnimalDTO Object creation
  */
-
-
 @Data
 @JsonInclude(Include.NON_NULL)
 public class AnimalDTO {
@@ -22,8 +20,6 @@ public class AnimalDTO {
   /**
    * Constructor needs three parameters to be initialized: ID, CreationDate and LastUpdate
    */
-
-
   public void cleanRequest() {
     this.id = null;
     this.creationDate = null;

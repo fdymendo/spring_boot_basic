@@ -6,7 +6,6 @@ import com.fdymendo.learning.springbootbasic.dto.AnimalDTO;
 /**
  * An interface that represent IAnimalService.
  */
-
 public interface IAnimalService extends ICrudTemplate<AnimalDTO> {
 
 }

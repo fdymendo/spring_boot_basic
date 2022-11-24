@@ -21,7 +21,6 @@ import com.fdymendo.learning.springbootbasic.service.IAnimalService;
  * @RequestMapping Annotation that relate a method with a http petition.
  *
  */
-
 @RestController
 @RequestMapping(path = "/animals/v1")
 public class AnimalController extends ACrudControllerTemplate<IAnimalService, AnimalDTO> {
@@ -32,7 +31,6 @@ public class AnimalController extends ACrudControllerTemplate<IAnimalService, An
    * @param service it's an argument that extends from the superclass ACrudControllerTemplate.
    * @return an Item saved.
    */
-
   public AnimalController(IAnimalService service) {
     super(service);
   }
@@ -49,7 +47,6 @@ public class AnimalController extends ACrudControllerTemplate<IAnimalService, An
    * @param id the ID passed by argument of the deleteById function.
    * @return the item deleted.
    */
-
   @Override
   @DeleteMapping(path = "/{id}")
   protected ResponseEntity<ResponseDefault> deleteById(@PathVariable int id) {
@@ -61,7 +58,6 @@ public class AnimalController extends ACrudControllerTemplate<IAnimalService, An
    * @GetMapping annotation for a HTTP GET that handle a specific method.
    * @return all items in ACrudControllerTemplate
    */
-
   @Override
   @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
   protected ResponseEntity<ResponseDefault> findAll() {
@@ -72,7 +68,6 @@ public class AnimalController extends ACrudControllerTemplate<IAnimalService, An
    * @GetMapping annotation for a HTTP GET that handle a specific method.
    * @return one items in ACrudControllerTemplate by it's ID
    */
-
   @Override
   @GetMapping(path = "/animal/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
   protected ResponseEntity<ResponseDefault> findById(@PathVariable int id) {
@@ -86,7 +81,6 @@ public class AnimalController extends ACrudControllerTemplate<IAnimalService, An
    * @return the item updated
    * @throws ApplicationException
    */
-
   @Override
   @PutMapping(path = "/animal/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
   protected ResponseEntity<ResponseDefault> update(@RequestBody AnimalDTO animalDTO,

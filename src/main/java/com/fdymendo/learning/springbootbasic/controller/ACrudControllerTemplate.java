@@ -11,8 +11,6 @@ import com.fdymendo.learning.springbootbasic.model.ResponseDefault;
  *
  * ACrudControllerTemplate constructor that needs S service to create the object
  */
-
-
 public abstract class ACrudControllerTemplate<S, I> {
 
   protected S service;

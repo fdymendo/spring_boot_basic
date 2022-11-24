@@ -9,7 +9,6 @@ import com.fdymendo.learning.springbootbasic.model.ResponseDefault;
  *  An interface that extends from JpaRepository and has saveItem , updateItem, deleteItem, getItem
  *  and getAllItems functions.
  */
-
 public interface ICrudTemplate<T> {
 
   ResponseEntity<ResponseDefault> saveItem(T item);

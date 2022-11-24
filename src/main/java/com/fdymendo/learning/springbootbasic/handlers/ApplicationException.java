@@ -24,7 +24,6 @@ public class ApplicationException extends Exception {
    * @param message the message from the super class inherited by the ApplicationException
    * @param httpStatus Teh message from the server that allows to know the request input in a website
    */
-
   public ApplicationException(Exception e, String message, HttpStatus httpStatus) {
     super(message, e);
     this.httpStatus = httpStatus;

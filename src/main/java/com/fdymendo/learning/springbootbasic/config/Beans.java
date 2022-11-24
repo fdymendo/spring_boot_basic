@@ -7,8 +7,6 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @Bean it's a component that can be reused and manipulated.
  */
-
-
 @Configuration
 public class Beans {
 

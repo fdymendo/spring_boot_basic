@@ -24,7 +24,6 @@ public class ApplicationHandler extends ResponseEntityExceptionHandler {
    * @param request the web request made
    * @return generic response method responseError500
    */
-
   @ExceptionHandler(Exception.class)
   public ResponseEntity<ResponseError> exceptionFound(Exception ex, WebRequest request) {
     log.error(ex.getMessage());
@@ -39,7 +38,6 @@ public class ApplicationHandler extends ResponseEntityExceptionHandler {
    * @param request the web request made
    * @return a log with the message thrown by the errors occurred.
    */
-
   @ExceptionHandler(ApplicationException.class)
   public ResponseEntity<ResponseError> exceptionFound(ApplicationException ex, WebRequest request) {
     log.error(ex.getMessage());
@@ -52,7 +50,6 @@ public class ApplicationHandler extends ResponseEntityExceptionHandler {
    * @param request the web request made
    * @return The exception details will already be printed as part of the stacktrace
    */
-
   @ExceptionHandler({EmptyResultDataAccessException.class, NoSuchElementException.class})
   public ResponseEntity<ResponseDefault> exceptionFound(EmptyResultDataAccessException ex,
       WebRequest request) {
