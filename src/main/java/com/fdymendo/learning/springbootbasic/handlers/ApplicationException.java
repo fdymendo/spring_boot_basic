@@ -6,13 +6,7 @@ import lombok.Setter;
 
 public class ApplicationException extends Exception {
 
-
-
-
   private static final long serialVersionUID = 1L;
-
-
-
 
   @Getter
   @Setter

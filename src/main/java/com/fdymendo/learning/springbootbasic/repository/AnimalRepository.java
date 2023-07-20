@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import com.fdymendo.learning.springbootbasic.entities.AnimalEntity;
 
 /**
- * @Repository it's an annotation that marks a class that will have the repository finality.
+ * The Repository annotation marks a class that serves as a repository, indicating that it will be used for data access and storage.
  */
 @Repository
 public interface AnimalRepository extends JpaRepository<AnimalEntity, Integer> {

@@ -17,9 +17,9 @@ import lombok.extern.log4j.Log4j2;
 @ControllerAdvice
 public class ApplicationHandler extends ResponseEntityExceptionHandler {
 
-
   /***
-   * this class throws a possible exception found while doing a web request
+   * this a function throws a possible exception found while doing a web request
+   *
    * @param ex as the stacktrace needs the exception thrown and the request made
    * @param request the web request made
    * @return generic response method responseError500
@@ -30,9 +30,8 @@ public class ApplicationHandler extends ResponseEntityExceptionHandler {
     return GenericMethods.responseError500(ApplicationConstant.ERROR_MESSAGE_500);
   }
 
-
-
   /***
+   *   this a function throws a possible exception found while doing a web request
    *
    * @param ex when found an application exception
    * @param request the web request made
@@ -45,6 +44,7 @@ public class ApplicationHandler extends ResponseEntityExceptionHandler {
   }
 
   /**
+   * this a function throws a possible exception found while doing a web request
    *
    * @param ex Data access exception thrown when a result was expected to have at least one row
    * @param request the web request made

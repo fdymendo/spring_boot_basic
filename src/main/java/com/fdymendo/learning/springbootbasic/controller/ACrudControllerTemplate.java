@@ -15,7 +15,7 @@ public abstract class ACrudControllerTemplate<S, I> {
 
   protected S service;
 
-  public ACrudControllerTemplate(S service) {
+  protected ACrudControllerTemplate(S service) {
     this.service = service;
   }
 
