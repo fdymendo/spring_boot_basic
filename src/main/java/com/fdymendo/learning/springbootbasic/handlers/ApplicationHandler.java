@@ -17,18 +17,39 @@ import lombok.extern.log4j.Log4j2;
 @ControllerAdvice
 public class ApplicationHandler extends ResponseEntityExceptionHandler {
 
+  /***
+   * this a function throws a possible exception found while doing a web request
+   *
+   * @param ex as the stacktrace needs the exception thrown and the request made
+   * @param request the web request made
+   * @return generic response method responseError500
+   */
   @ExceptionHandler(Exception.class)
   public ResponseEntity<ResponseError> exceptionFound(Exception ex, WebRequest request) {
     log.error(ex.getMessage());
     return GenericMethods.responseError500(ApplicationConstant.ERROR_MESSAGE_500);
   }
 
+  /***
+   *   this a function throws a possible exception found while doing a web request
+   *
+   * @param ex when found an application exception
+   * @param request the web request made
+   * @return a log with the message thrown by the errors occurred.
+   */
   @ExceptionHandler(ApplicationException.class)
   public ResponseEntity<ResponseError> exceptionFound(ApplicationException ex, WebRequest request) {
     log.error(ex.getMessage());
     return GenericMethods.genericResponse(ex);
   }
 
+  /**
+   * this a function throws a possible exception found while doing a web request
+   *
+   * @param ex Data access exception thrown when a result was expected to have at least one row
+   * @param request the web request made
+   * @return The exception details will already be printed as part of the stacktrace
+   */
   @ExceptionHandler({EmptyResultDataAccessException.class, NoSuchElementException.class})
   public ResponseEntity<ResponseDefault> exceptionFound(EmptyResultDataAccessException ex,
       WebRequest request) {
